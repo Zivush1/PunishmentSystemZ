@@ -1,0 +1,74 @@
+name: PunishmentSystemZ
+version: '${project.version}'
+main: me.zivush.punishmentsystemz.PunishmentSystemZ
+api-version: '1.20'
+commands:
+  ban:
+    description: Ban a player
+    usage: /ban <player> <duration> <reason>
+    permission: punishmentsystemz.ban
+  unban:
+    description: Unban a player
+    usage: /unban <player>
+    permission: punishmentsystemz.unban
+  kick:
+    description: Kick a player
+    usage: /kick <player> <reason>
+    permission: punishmentsystemz.kick
+  mute:
+    description: Mute a player
+    usage: /mute <player> <duration> <reason>
+    permission: punishmentsystemz.mute
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: punishmentsystemz.unmute
+  blacklist:
+    description: Blacklist a player
+    usage: /blacklist <player> <reason>
+    permission: punishmentsystemz.blacklist
+  banip:
+    description: Ban an IP address
+    usage: /banip <ip/player> <duration> <reason>
+    permission: punishmentsystemz.banip
+  unbanip:
+    description: Unban an IP address
+    usage: /unbanip <ip>
+    permission: punishmentsystemz.unbanip
+  history:
+    description: View a player's punishment history
+    usage: /history <player>
+    permission: punishmentsystemz.history
+
+permissions:
+  punishmentsystemz.*:
+    description: Gives access to all PunishmentSystemZ commands
+    children:
+      punishmentsystemz.ban: true
+      punishmentsystemz.unban: true
+      punishmentsystemz.kick: true
+      punishmentsystemz.mute: true
+      punishmentsystemz.unmute: true
+      punishmentsystemz.blacklist: true
+      punishmentsystemz.banip: true
+      punishmentsystemz.unbanip: true
+      punishmentsystemz.history: true
+  punishmentsystemz.ban:
+    description: Allows banning players
+  punishmentsystemz.unban:
+    description: Allows unbanning players
+  punishmentsystemz.kick:
+    description: Allows kicking players
+  punishmentsystemz.mute:
+    description: Allows muting players
+  punishmentsystemz.unmute:
+    description: Allows unmuting players
+  punishmentsystemz.blacklist:
+    description: Allows blacklisting players
+  punishmentsystemz.banip:
+    description: Allows banning IP addresses
+  punishmentsystemz.unbanip:
+    description: Allows unbanning IP addresses
+  punishmentsystemz.history:
+    description: Allows viewing punishment history
+
